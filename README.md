@@ -1,5 +1,8 @@
 # dos
 
+vk- https://vk.com/iiii05
+
+
 dos is an python3 app for SECURITY TESTING PURPOSES ONLY!
 dos is a HTTP DoS Test Tool.
 
