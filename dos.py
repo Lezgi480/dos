@@ -138,7 +138,7 @@ class dos(object):
 
         # Taunt!
         print()
-        print(GOLDENEYE_BANNER)
+        print(DOS_BANNER)
         print()
 
     # Do the fun!
@@ -174,7 +174,7 @@ class dos(object):
         try:
             if self.counter[0] > 0 or self.counter[1] > 0:
 
-                print("{0} GoldenEye strikes hit. ({1} Failed)".format(self.counter[0], self.counter[1]))
+                print("{0} dos strikes hit. ({1} Failed)".format(self.counter[0], self.counter[1]))
 
                 if self.counter[0] > 0 and self.counter[1] > 0 and self.last_counter[0] == self.counter[0] and self.counter[1] > self.last_counter[1]:
                     print("\tServer may be DOWN!")
@@ -527,9 +527,9 @@ def usage():
     print()
     print('-----------------------------------------------------------------------------------------------------------')
     print()
-    print(GOLDENEYE_BANNER)
+    print(DOS_BANNER)
     print()
-    print(' USAGE: ./goldeneye.py <url> [OPTIONS]')
+    print(' USAGE: ./dos.py <url> [OPTIONS]')
     print()
     print(' OPTIONS:')
     print('\t Flag\t\t\tDescription\t\t\t\t\t\tDefault')
@@ -614,13 +614,13 @@ def main():
             except EnvironmentError:
                 error("cannot read file {0}".format(uas_file))
 
-        goldeneye = GoldenEye(url)
-        goldeneye.useragents = useragents
-        goldeneye.nr_workers = workers
-        goldeneye.method = method
-        goldeneye.nr_sockets = socks
+        dos = dos(url)
+        dos.useragents = useragents
+        dos.nr_workers = workers
+        dos.method = method
+        dos.nr_sockets = socks
 
-        goldeneye.fire()
+        dos.fire()
 
     except getopt.GetoptError as err:
 
